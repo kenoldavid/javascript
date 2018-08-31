@@ -1,0 +1,6 @@
+#item {
+    padding: 4px;
+    color: red;
+    border: 1px dashed red;
+    text-transform: uppercase;
+}
