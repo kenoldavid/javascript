@@ -1,6 +1,6 @@
 #item {
-    padding: 4px;
-    color: red;
-    border: 1px dashed red;
-    text-transform: uppercase;
-}
+    padding: 4px 6px;
+    background-color: yellow;
+    border-radius: 10px;
+    text-transform: lowercase;
+  }
