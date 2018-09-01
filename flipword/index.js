@@ -12,22 +12,15 @@
 
 let wordsList = ["pizza", "coffee", "lunch", "dinner", "loan", "gig"];
 let wordsListSize = wordsList.length;
-console.log("wordsListSize: " + wordsListSize)
 let word = document.getElementById("item");
 
 let currPos = 0;
 let nextPos = 0;
 
 let initialTimeout = 1500;
-
 let maxTimeout = wordsListSize * initialTimeout;
-console.log("Max Timeout: " + maxTimeout)
-
 let sliceTimeout = (maxTimeout / wordsListSize);
-console.log("Initial sliceTimeout: " + sliceTimeout)
-
 let intervalTime = maxTimeout + sliceTimeout;
-console.log("Initial intervalTime: " + intervalTime)
 
 function setWord() {
     word.innerHTML = "thing";
@@ -39,23 +32,18 @@ function flipWord() {
 
     while (sliceTimeout <= maxTimeout) {
         setTimeout(function () {
-            if (currPos <= wordsListSize) {
-                console.log("currPos: " + currPos)                
+            if (currPos <= wordsListSize) {                
                 word.innerHTML = wordsList[currPos];
                 nextPos = ++currPos;
-                console.log("Next nextPos: " + nextPos)
             }
         }, sliceTimeout);
 
         sliceTimeout += initialTimeout;
-        console.log("Next sliceTimeout: " + sliceTimeout)
     }
 
     if (nextPos >= wordsListSize) {
         currPos = 0;
-        console.log("(if) Max Timeout: " + maxTimeout)
         sliceTimeout = (maxTimeout / wordsListSize);
-        console.log("(if) sliceTimeout: " + sliceTimeout)
     }
 }
 
